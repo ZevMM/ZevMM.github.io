@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Google Apps Script API Quickstart</title>
+    <title>SimplyWise Apps Script Demo</title>
     <meta charset="utf-8" />
   </head>
   <body>
-    <p>Google Apps Script API Quickstart</p>
 
     <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+    <button
+    id="authorize_button" 
+    style="height: 50px; width: 100px; position: absolute; left: 50%; top: 30%; font-size: large; background-color:cornflowerblue"
+    onclick="handleAuthClick()">click me!</button>
+
     <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
 
     <pre id="content" style="white-space: pre-wrap;"></pre>
@@ -110,7 +113,7 @@
           google.accounts.oauth2.revoke(token.access_token);
           gapi.client.setToken('');
           document.getElementById('content').innerText = '';
-          document.getElementById('authorize_button').innerText = 'Authorize';
+          document.getElementById('authorize_button').innerText = 'click me!';
           document.getElementById('signout_button').style.visibility = 'hidden';
         }
       }
